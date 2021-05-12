@@ -1,0 +1,136 @@
+// This file controls [SPELL] sounds of spells added by Sagenlicht
+//
+// it uses sound IDs beginning with 27000 
+//
+// * Banks of 20 sounds per spells are used from 6000 to 19999
+//   the bank consists of the following fields:
+//
+//   00 - spell begin                (before cast anim)
+//   01 - spell end                  (end of spell)
+//   02 - spell effect               (after cast anim)
+//   03 - spell new round            (spells with duration)
+//   04 - spell projectile begin     (only projectile spells)
+//   05 - spell projectile end       (only projectile spells)
+//   06 - spell projectile in-flight (only projectile spells) ***not implemented yet
+//   07 - spell hit                  (sound to play when a spell "hits")
+//   08 - spell struck				 (sound to play if shield spell struck)
+//   09 - reserved, N/A
+//   10 - reserved, N/A
+//   11 - reserved, N/A
+//   12 - reserved, N/A
+//   13 - reserved, N/A
+//   14 - reserved, N/A
+//   15 - reserved, N/A
+//   16 - reserved, N/A
+//   17 - reserved, N/A
+//   18 - reserved, N/A
+//   19 - reserved, N/A
+
+// to figure out your BASE_NUMBER, use this formula:
+//     BASE_NUMBER = 6000 + (20 * spell_number)
+//
+// where spell_number is the spell# associated with a spell (see mes/spells.mes)
+// e.g. SPELL_NONE is 0 (6000), SPELL_AID is 1 (6020), SPELL_ZONE_OF_TRUTH is 541 (16820)
+
+// [3300] *[Eldritch Blast]
+{72000}{} // spell begin
+{72001}{} // spell end
+{72002}{} // spell effect
+{72003}{} // spell new round
+{72004}{} // spell projectile begin
+{72005}{} // spell projectile end
+{72006}{} // spell projectile in-flight
+{72007}{} // spell hit
+{72008}{} // spell struck
+
+// [3301] *[Eldritch Spear]
+{72020}{} // spell begin
+{72021}{} // spell end
+{72022}{} // spell effect
+{72023}{} // spell new round
+{72024}{} // spell projectile begin
+{72025}{} // spell projectile end
+{72026}{} // spell projectile in-flight
+{72027}{} // spell hit
+{72028}{} // spell struck
+
+// [3302] *[Eldritch Chain]
+{72040}{} // spell begin
+{72041}{} // spell end
+{72042}{} // spell effect
+{72043}{} // spell new round
+{72044}{} // spell projectile begin
+{72045}{} // spell projectile end
+{72046}{} // spell projectile in-flight
+{72047}{} // spell hit
+{72048}{} // spell struck
+
+
+// [3311] *[Frightful Blast]
+{72220}{} // spell begin
+{72221}{} // spell end
+{72222}{} // spell effect
+{72223}{} // spell new round
+{72224}{} // spell projectile begin
+{72225}{} // spell projectile end
+{72226}{} // spell projectile in-flight
+{72227}{} // spell hit
+{72228}{} // spell struck
+
+// [3312] *[Sickening Blast]
+{72240}{} // spell begin
+{72241}{} // spell end
+{72242}{} // spell effect
+{72243}{} // spell new round
+{72244}{} // spell projectile begin
+{72245}{} // spell projectile end
+{72246}{} // spell projectile in-flight
+{72247}{} // spell hit
+{72248}{} // spell struck
+
+// [3313] *[Beshadowed Blast]
+{72260}{} // spell begin
+{72261}{} // spell end
+{72262}{} // spell effect
+{72263}{} // spell new round
+{72264}{} // spell projectile begin
+{72265}{} // spell projectile end
+{72266}{} // spell projectile in-flight
+{72267}{} // spell hit
+{72268}{} // spell struck
+
+// [3314] *[Brimstone Blast]
+{72280}{} // spell begin
+{72281}{} // spell end
+{72282}{} // spell effect
+{72283}{} // spell new round
+{72284}{} // spell projectile begin
+{72285}{} // spell projectile end
+{72286}{} // spell projectile in-flight
+{72287}{} // spell hit
+{72288}{} // spell struck
+
+// [3315] *[Hellrime Blast]
+{72300}{} // spell begin
+{72301}{} // spell end
+{72302}{} // spell effect
+{72303}{} // spell new round
+{72304}{} // spell projectile begin
+{72305}{} // spell projectile end
+{72306}{} // spell projectile in-flight
+{72307}{} // spell hit
+{72308}{} // spell struck
+
+
+
+
+// [3331] *[Beguiling Influence]
+{72620}{} // spell begin
+{72621}{} // spell end
+{72622}{} // spell effect
+{72623}{} // spell new round
+{72624}{} // spell projectile begin
+{72625}{} // spell projectile end
+{72626}{} // spell projectile in-flight
+{72627}{} // spell hit
+{72628}{} // spell struck

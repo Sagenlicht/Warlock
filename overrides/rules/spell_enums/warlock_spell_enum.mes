@@ -1,0 +1,34 @@
+// Warlock Invocation enums
+
+// Blast Shape Stances are in range 3301 - 3310
+// Essence Stance Shapes are in range 3311 - 3330
+
+{3300}{Eldritch Blast}
+{3301}{Eldritch Spear}
+{3302}{Eldritch Chain}
+{3311}{Frightful Blast}
+{3312}{Sickening Blast}
+{3313}{Beshadowed Blast}
+{3314}{Brimstone Blast}
+{3315}{Hellrime Blast}
+{3331}{Beguiling Influence}
+
+{3300}{Eldritch Blast}
+{8301}{Eldritch Spear}
+{8302}{Eldritch Chain}
+{8311}{Frightful Blast}
+{8312}{Sickening Blast}
+{8313}{Beshadowed Blast}
+{8314}{Brimstone Blast}
+{8315}{Hellrime Blast}
+{8331}{Beguiling Influence}
+
+{22300}{TAG_SPELLS_ELDRITCH_BLAST}
+{23301}{TAG_SPELLS_ELDRITCH_SPEAR}
+{23302}{TAG_SPELLS_ELDRITCH_CHAIN}
+{23311}{TAG_SPELLS_FRIGHTFUL_BLAST}
+{23312}{TAG_SPELLS_SICKENING_BLAST}
+{23313}{TAG_SPELLS_BESHADOWED_BLAST}
+{23314}{TAG_SPELLS_BRIMSTONE_BLAST}
+{23315}{TAG_SPELLS_HELLRIME_BLAST}
+{23331}{TAG_SPELLS_BEGUILING_INFLUENCE}

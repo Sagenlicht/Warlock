@@ -1,0 +1,26 @@
+//Warlock Invocation descriptions
+
+//Shape Stances are in range 3301 - 3310
+//Essence Stances are in range 3311 - 3330
+
+// Spell Names
+{3300}{Eldritch Blast}
+{3301}{Eldritch Spear}
+{3302}{Eldritch Chain}
+{3311}{Frightful Blast}
+{3312}{Sickening Blast}
+{3313}{Beshadowed Blast}
+{3314}{Brimstone Blast}
+{3315}{Hellrime Blast}
+{3331}{Beguiling Influence}
+
+// Spell Descriptions
+{8300} Eldritch Blast {Invocation Basic Eldritch Blast, dealing 1d6/two levels (max 9d6) damage.}
+{8301} Eldritch Spear {Invocation(Eldritch Shape Invocation) Eldritch Blast range increases to 250 feet.}
+{8302} Eldritch Chain {Invocation Blast jumps from initial target to secondary targets.}
+{8311} Frightful Blast {Invocation[Mind-Affecting][Fear](Eldritch Essence Invocation) Any creature struck by a frightful blast must succeed on a Will save or become shaken for 1 minute.}
+{8312} Sickening Blast {Invocation(Eldritch Essence Invocation) Living Creature must make Fortitude save or become sickened.}
+{8313} Beshadowed Blast {Invocation Target must make Fortitude save or become blind for 1 round.}
+{8314} Brimstone Blast {Invocation Blast deals fire damage and target must make Reflex save or catch fire.}
+{8315} Hellrime Blast {Invocation Blast deals cold damage and target must make Fortitude save or take –2 penalty to Dexterity.}
+{8331} Beguiling Influence {Invocation You gain a +6 bonus on Bluff, Diplomacy, and Intimidate checks for a period of 24 hours.}

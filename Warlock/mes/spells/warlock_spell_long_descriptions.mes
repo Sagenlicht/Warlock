@@ -1,7 +1,6 @@
 // Warlock Invocations long description
-// Warlock Shape Stances are in range 3301 - 3310
 
-{8300} Eldritch Blast {Basic Eldritch Blast, dealing 1d6/two levels (max 9d6) damage.
+{7300} Eldritch Blast {Basic Eldritch Blast, dealing 1d6/two levels (max 9d6) damage.
 
 School:          Invocation
 Casting:         1 action ['S']
@@ -9,60 +8,37 @@ Range:               60
 Target:             Single
 Duration:      0,  Save: None negates,  SR: Yes}
 
-{8301} Eldritch Spear {Eldritch Blast range increases to 250 feet.
-School:          Invocation
+{7301} Frightful Blast {Frightful Blast
+School:          Transmutation
+Casting:         1 action ['']
+Range:               30 
+Target:             Single
+Duration:      0,  Save: Willpower negates,  SR: Yes}
+
+{7302} Sickening Blast {Sickening Blast
+School:          Transmutation
+Casting:         1 action ['S']
+Range:               30 
+Target:             Single
+Duration:      0,  Save: Fortitude negates,  SR: Yes}
+
+{7303} Eldritch Spear {Eldritch Spear
+School:          Transmutation
 Casting:         1 action ['S']
 Range:               250 
-Target:             Single
+Target:             Personal
 Duration:      0,  Save: None negates,  SR: Yes}
 
-{8302} Eldritch Chain {Blast jumps from initial target to secondary targets.
-School:          Invocation
-Casting:         1 action ['S']
-Range:               60 
-Target:             Single
-Duration:      0,  Save: None negates,  SR: Yes}
-
-{8311} Frightful Blast {Any creature struck by a frightful blast must succeed on a Will save or become shaken for 1 minute. Creatures with immunity to mind-affecting spells and abilities or fear effects cannot be shaken by a frightful blast.
-
-School:          Invocation Essence Invocation [Mind-Affecting][Fear]
-Casting:         1 action ['S']
-Range:               60 
-Target:             Single
-Duration:      1 minute,  Save: Willpower negates,  SR: Yes}
-
-{8312} Sickening Blast {Living Creature must make Fortitude save or become sickened.
-
-School:          Invocation
-Casting:         1 action ['S']
-Range:               60 
-Target:             Single
-Duration:      10,  Save: Fortitude negates,  SR: Yes}
-
-{8313} Beshadowed Blast {Target must make Fortitude save or become blind for 1 round.
-School:          Invocation
+{7304} Hideous Blow {Hideous Blow
+School:          Transmutation
 Casting:         1 action ['S']
 Range:               Personal 
 Target:             Personal
 Duration:      0,  Save: None negates,  SR: No}
 
-{8314} Brimstone Blast {Blast deals fire damage and target must make Reflex save or catch fire.
-School:          Invocation
+{7305} Beguiling Influence {Beguiling Influence
+School:          Transmutation
 Casting:         1 action ['S']
 Range:               0 
 Target:             Personal
-Duration:      0,  Save: None negates,  SR: No}
-
-{8315} Hellrime Blast {	Blast deals cold damage and target must make Fortitude save or take –2 penalty to Dexterity.
-School:          Invocation
-Casting:         1 action ['S']
-Range:               Personal 
-Target:             Personal
-Duration:      0,  Save: None negates,  SR: No}
-
-{8331} Beguiling Influence {You gain a +6 bonus on Bluff, Diplomacy, and Intimidate checks for a period of 24 hours.
-School:          Invocation
-Casting:         1 action ['S']
-Range:               Personal 
-Target:             Personal
-Duration:      14400,  Save: None negates,  SR: No}
+Duration:      1,  Save: None negates,  SR: No}

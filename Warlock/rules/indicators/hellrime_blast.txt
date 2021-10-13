@@ -1,5 +1,0 @@
-ID_string: HELLRIME_BLAST
-effect_type: 1
-texture_file: art\interface\player_conditions\ailments\spell chill touch.tga
-help_topic: TAG_SPELLS_HELLRIME_BLAST
-tooltip_base_text: Hellrime Blast

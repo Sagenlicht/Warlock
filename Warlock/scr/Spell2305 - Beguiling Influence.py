@@ -8,7 +8,7 @@ def OnBeginSpellCast(spell):
 def OnSpellEffect(spell):
     print "Beguiling Influence OnSpellEffect"
 
-    spell.duration = 14400 #1 day
+    spell.duration = 1 * spell.caster_level
     spellTarget = spell.target_list[0]
 
     spellTarget.obj.condition_add_with_args('sp-Beguiling Influence', spell.id, spell.duration)

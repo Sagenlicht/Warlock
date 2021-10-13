@@ -1,8 +1,8 @@
-School: Evocation
-Level: Wlk 4
+School: Transmutation
+Level: Wlk 2
 Component: S
 Casting Time: 1 action
-Range: Personal
+Range: 0
 Saving Throw: None
 Spell Resistance: No
 Projectile: No

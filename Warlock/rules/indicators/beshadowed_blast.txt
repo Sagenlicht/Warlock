@@ -1,5 +1,0 @@
-ID_string: BESHADOWED_BLAST
-effect_type: 1
-texture_file: art\interface\player_conditions\ailments\spell blindness.tga
-help_topic: TAG_SPELLS_BESHADOWED_BLAST
-tooltip_base_text: Beshadowed Blast

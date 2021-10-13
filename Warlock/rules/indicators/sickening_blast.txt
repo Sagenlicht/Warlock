@@ -1,5 +1,0 @@
-ID_string: SICKENING_BLAST
-effect_type: 1
-texture_file: art\interface\player_conditions\ailments\spell fog cloud.tga
-help_topic: TAG_SPELLS_SICKENING_BLAST
-tooltip_base_text: Sickening Blast

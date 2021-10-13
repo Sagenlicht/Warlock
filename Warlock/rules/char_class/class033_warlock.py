@@ -23,7 +23,7 @@ classEnum = stat_level_warlock
 ###################################################
 
 class_feats = {
-1: (feat_armor_proficiency_light, feat_simple_weapon_proficiency, "Warlock Eldritch Blast", "Warlock Spell Failure"),
+1: (feat_armor_proficiency_light, feat_simple_weapon_proficiency, "Warlock Eldritch Blast", "Warlock Spell Failure", "Warlock Invocations",),
 2: ("Warlock Detect Magic",),
 3: ("Warlock Damage Reduction",),
 8: ("Warlock Fiendish Resilience",),
@@ -38,11 +38,11 @@ skill_profession, skill_sense_motive, skill_spellcraft, skill_use_magic_device) 
 #Spell Level 7-9 = Dark Invocations
 ### Note Some Dark Invocations actually would be spell level 6 by raw but I need a filter option for learning so I move these to spell level 7
 
-spell_list = {
-    2: (spell_frightful_blast, spell_sickening_blast, spell_eldritch_spear, spell_beguiling_influence,),
-    3: (spell_brimstone_blast,),
-    4: (spell_beshadowed_blast, spell_hellrime_blast, spell_eldritch_chain,)
-    }
+#spell_list = {
+#    2: (spell_frightful_blast, spell_sickening_blast, spell_eldritch_spear, spell_beguiling_influence,),
+#    3: (spell_brimstone_blast,),
+#    4: (spell_beshadowed_blast, spell_hellrime_blast, spell_eldritch_chain,)
+#    }
 
     #spell_breath_of_the_night, spell_dark_ones_own_luck, spell_darkness, spell_earthen_grasp, spell_miasmic_cloud, spell_see_the_unseen, spell_spiderwalk),
     #1: (spell_charm, spell_curse_of_despair, spell_the_dead_walk, spell_stony_grasp, spell_voidsense, spell_voracious_dispelling, spell_walk_unseen, spell_wall_of_gloom),

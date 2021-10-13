@@ -1,27 +1,24 @@
 from toee import *
 
 def OnBeginSpellCast(spell):
-    print "Hellrime Blast OnBeginSpellCast"
+    print "Eldritch Spear OnBeginSpellCast"
     print "spell.target_list=", spell.target_list
     print "spell.caster=", spell.caster, " caster.level= ", spell.caster_level
 
 def OnSpellEffect(spell):
-    print "Hellrime Blast OnSpellEffect"
+    print "Eldritch Spear OnSpellEffect"
 
     spell.duration = 0 * spell.caster_level
     spellTarget = spell.target_list[0]
 
-    spell.caster.d20_send_signal("S_Essence_Stance_Change", 3315)
-    spell.caster.float_text_line("Eldritch Blast changed to Hellrime Blast")
-
-    spell.target_list.remove_target(spellTarget.obj)
-
+    spellTarget.obj.condition_add_with_args('sp-Eldritch Spear', spell.id, spell.duration)
+    spellTarget.partsys_id = game.particles('sp-Heroism', spellTarget.obj)
 
     spell.spell_end(spell.id)
 
 def OnBeginRound(spell):
-    print "Hellrime Blast OnBeginRound"
+    print "Eldritch Spear OnBeginRound"
 
 def OnEndSpellCast(spell):
-    print "Hellrime Blast OnEndSpellCast"
+    print "Eldritch Spear OnEndSpellCast"
 

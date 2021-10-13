@@ -8,13 +8,12 @@ def OnBeginSpellCast(spell):
 def OnSpellEffect(spell):
     print "Sickening Blast OnSpellEffect"
 
-    spell.duration = 0
+    spell.duration = 0 * spell.caster_level
     spellTarget = spell.target_list[0]
 
-    spell.caster.d20_send_signal("S_Essence_Stance_Change", 3312)
-    spell.caster.float_text_line("Eldritch Blast changed to Sickening Blast")
+    spellTarget.obj.condition_add_with_args('sp-Sickening Blast', spell.id, spell.duration)
+    spellTarget.partsys_id = game.particles('sp-Heroism', spellTarget.obj)
 
-    spell.target_list.remove_target(spellTarget.obj)
     spell.spell_end(spell.id)
 
 def OnBeginRound(spell):

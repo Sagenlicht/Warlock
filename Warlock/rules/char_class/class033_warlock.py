@@ -38,11 +38,11 @@ skill_profession, skill_sense_motive, skill_spellcraft, skill_use_magic_device) 
 #Spell Level 7-9 = Dark Invocations
 ### Note Some Dark Invocations actually would be spell level 6 by raw but I need a filter option for learning so I move these to spell level 7
 
-#spell_list = {
+spell_list = {
 #    2: (spell_frightful_blast, spell_sickening_blast, spell_eldritch_spear, spell_beguiling_influence,),
 #    3: (spell_brimstone_blast,),
 #    4: (spell_beshadowed_blast, spell_hellrime_blast, spell_eldritch_chain,)
-#    }
+    }
 
     #spell_breath_of_the_night, spell_dark_ones_own_luck, spell_darkness, spell_earthen_grasp, spell_miasmic_cloud, spell_see_the_unseen, spell_spiderwalk),
     #1: (spell_charm, spell_curse_of_despair, spell_the_dead_walk, spell_stony_grasp, spell_voidsense, spell_voracious_dispelling, spell_walk_unseen, spell_wall_of_gloom),
@@ -157,59 +157,59 @@ def LevelupGetBonusFeats( obj ):
     char_editor.set_bonus_feats(bonFeatInfo)
     return 0
 
-def IsSelectingSpellsOnLevelup( obj ):
-    newLevel = obj.stat_level_get(classEnum) + 1
-    if newLevel % 2 == 0:
-        return 1
-    elif newLevel == 1:
-        return 1
-    elif newLevel == 15:
-        return 1
-    return 0
+#def IsSelectingSpellsOnLevelup( obj ):
+#    newLevel = obj.stat_level_get(classEnum) + 1
+#    if newLevel % 2 == 0:
+#        return 1
+#    elif newLevel == 1:
+#        return 1
+#    elif newLevel == 15:
+#        return 1
+#    return 0
 
-def InitSpellSelection( obj, classLvlNew = -1, classLvlIncrement = 1):
-    classLvl = obj.stat_level_get(classEnum)
-    if classLvlNew <= 0:
-        classLvlNew = classLvl + 1
-    maxSpellLvl = char_editor.get_max_spell_level(obj, classEnum, classLvlNew ) # this regards spell list extension by stuff like Mystic Theurge
-    
+#def InitSpellSelection( obj, classLvlNew = -1, classLvlIncrement = 1):
+#    classLvl = obj.stat_level_get(classEnum)
+#    if classLvlNew <= 0:
+#        classLvlNew = classLvl + 1
+#    maxSpellLvl = char_editor.get_max_spell_level(obj, classEnum, classLvlNew ) # this regards spell list extension by stuff like Mystic Theurge
+#    
     # Available Spells
-    spAvail = char_editor.get_learnable_spells(obj, classEnum, maxSpellLvl)
+#    spAvail = char_editor.get_learnable_spells(obj, classEnum, maxSpellLvl)
 
     # add spell level labels
-    for p in range(1,maxSpellLvl+1):
-        spAvail.append(char_editor.KnownSpellInfo(spell_label_level_0 + p, 0, classEnum))
-    spAvail.sort()
-    char_editor.append_available_spells(spAvail)
+#    for p in range(1,maxSpellLvl+1):
+#        spAvail.append(char_editor.KnownSpellInfo(spell_label_level_0 + p, 0, classEnum))
+#    spAvail.sort()
+#    char_editor.append_available_spells(spAvail)
     
     # Spell slots
-    spEnums = []
-    vacant_slot = char_editor.KnownSpellInfo(spell_vacant, 3, classEnum) # sets it to spell level -1
-    spEnums.append(vacant_slot)
-    char_editor.append_spell_enums(spEnums)
-    return 0
+#    spEnums = []
+#    vacant_slot = char_editor.KnownSpellInfo(spell_vacant, 3, classEnum) # sets it to spell level -1
+#    spEnums.append(vacant_slot)
+#    char_editor.append_spell_enums(spEnums)
+#    return 0
 
-def LevelupCheckSpells( obj):
-    spell_enums = char_editor.get_spell_enums()
-    classLvl = obj.stat_level_get(classEnum)
-    classLvlNew = classLvl + 1
-    if classLvlNew == 2:
-        sp_lvl_1_count = 0
-        spKnown = char_editor.get_known_class_spells(obj, classEnum)
-        for spInfo in spKnown:
-            if spInfo.spell_level == 1:
-                sp_lvl_1_count += 1
-        if sp_lvl_1_count > 20: # for scroll puffing maniacs
-            return 1
-    
-    for spInfo in spell_enums:
-        if spInfo.spell_enum == spell_vacant:
-            return 0
-    return 1
+#def LevelupCheckSpells( obj):
+#    spell_enums = char_editor.get_spell_enums()
+#    classLvl = obj.stat_level_get(classEnum)
+#    classLvlNew = classLvl + 1
+#    if classLvlNew == 2:
+#        sp_lvl_1_count = 0
+#        spKnown = char_editor.get_known_class_spells(obj, classEnum)
+#        for spInfo in spKnown:
+#            if spInfo.spell_level == 1:
+#                sp_lvl_1_count += 1
+#        if sp_lvl_1_count > 20: # for scroll puffing maniacs
+#            return 1
+#    
+#    for spInfo in spell_enums:
+#        if spInfo.spell_enum == spell_vacant:
+#            return 0
+#    return 1
 
-def LevelupSpellsFinalize( obj, classLvlNew = -1 ):
-    spEnums = char_editor.get_spell_enums()
-    char_editor.spell_known_add(spEnums) # internally takes care of duplicates and the labels/vacant slots
+#def LevelupSpellsFinalize( obj, classLvlNew = -1 ):
+#    spEnums = char_editor.get_spell_enums()
+#    char_editor.spell_known_add(spEnums) # internally takes care of duplicates and the labels/vacant slots
 
 #    classLvl = obj.stat_level_get(classEnum)
 #    if classLvlNew <= 0:
@@ -219,4 +219,4 @@ def LevelupSpellsFinalize( obj, classLvlNew = -1 ):
 #    # for new wizards, add all cantrips
 #    cantrips = char_editor.get_learnable_spells(obj, classEnum, 0)
 #    char_editor.spell_known_add(cantrips)
-    return 0
+#    return 0

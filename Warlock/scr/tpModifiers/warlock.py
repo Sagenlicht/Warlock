@@ -93,10 +93,10 @@ def pythonActionTriggerSpellAction(attachee, args, evt_obj):
 
 ###Handle Invocation Selection
 def initialInvocationSetup(attachee, args, evt_obj):
-    x = 0
-    while x in range(0,14):
-        args.set_arg(x, 0)
-        x +=1
+    invocationSlot = 0
+    for invocationSlot in range (0,14):
+        args.set_arg(invocationSlot, 0)
+        invocationSlot += 1
     return 0
 
 def selectInvocations(attachee, args, evt_obj):
@@ -203,10 +203,16 @@ def selectInvocations(attachee, args, evt_obj):
         radialSelectDarkInvocation.add_as_child(attachee, radialSelectInvocation)
     return 0
 
+def debugInvocationSlot(attachee, args, evt_obj):
+    slotToReturn = evt_obj.data1
+    evt_obj.return_val = args.get_arg(slotToReturn)
+    return 0
+
 warlockHandleInvocations = PythonModifier("Warlock Handle Invocations", 14) #0-11: InvocationEnum, empty, empty
 warlockHandleInvocations.MapToFeat("Warlock Invocations")
 warlockHandleInvocations.AddHook(ET_OnConditionAdd, EK_NONE, initialInvocationSetup, ())
 warlockHandleInvocations.AddHook(ET_OnBuildRadialMenuEntry , EK_NONE, selectInvocations, ())
+warlockHandleInvocations.AddHook(ET_OnD20PythonQuery, "PQ_Check_Invocation_Slot", debugInvocationSlot, ())
 
 warlockEldritchBlast = PythonModifier("Warlock Eldritch Blast Feat", 4) #essenceStanceEnum, shapeStanceEnum, essenceStanceSpellLevel, shapeStanceSpellLevel
 warlockEldritchBlast.MapToFeat("Warlock Eldritch Blast")
@@ -388,26 +394,26 @@ def OnGetBaseCasterLevel(attachee, args, evt_obj):
     evt_obj.bonus_list.add(classLvl, 0, 137)
     return 0
 
-def OnLevelupSpellsFinalize(attachee, args, evt_obj):
-    if evt_obj.arg0 != classEnum:
-        return 0
-    classSpecModule.LevelupSpellsFinalize(attachee)
-    return 0
+#def OnLevelupSpellsFinalize(attachee, args, evt_obj):
+#    if evt_obj.arg0 != classEnum:
+#        return 0
+#    classSpecModule.LevelupSpellsFinalize(attachee)
+#    return 0
     
-def OnInitLevelupSpellSelection(attachee, args, evt_obj):
-    if evt_obj.arg0 != classEnum:
-        return 0
-    classSpecModule.InitSpellSelection(attachee)
-    return 0
+#def OnInitLevelupSpellSelection(attachee, args, evt_obj):
+#    if evt_obj.arg0 != classEnum:
+#        return 0
+#    classSpecModule.InitSpellSelection(attachee)
+#    return 0
     
-def OnLevelupSpellsCheckComplete(attachee, args, evt_obj):
-    if evt_obj.arg0 != classEnum:
-        return 0
-    if not classSpecModule.LevelupCheckSpells(attachee):
-        evt_obj.bonus_list.add(-1, 0, 137) # denotes incomplete spell selection
-    return 1    
+#def OnLevelupSpellsCheckComplete(attachee, args, evt_obj):
+#    if evt_obj.arg0 != classEnum:
+#        return 0
+#    if not classSpecModule.LevelupCheckSpells(attachee):
+#        evt_obj.bonus_list.add(-1, 0, 137) # denotes incomplete spell selection
+#    return 1    
 
 classSpecObj.AddHook(ET_OnGetBaseCasterLevel, EK_NONE, OnGetBaseCasterLevel, ())
-classSpecObj.AddHook(ET_OnLevelupSystemEvent, EK_LVL_Spells_Finalize, OnLevelupSpellsFinalize, ())
-classSpecObj.AddHook(ET_OnLevelupSystemEvent, EK_LVL_Spells_Activate, OnInitLevelupSpellSelection, ())
-classSpecObj.AddHook(ET_OnLevelupSystemEvent, EK_LVL_Spells_Check_Complete, OnLevelupSpellsCheckComplete, ())
+#classSpecObj.AddHook(ET_OnLevelupSystemEvent, EK_LVL_Spells_Finalize, OnLevelupSpellsFinalize, ())
+#classSpecObj.AddHook(ET_OnLevelupSystemEvent, EK_LVL_Spells_Activate, OnInitLevelupSpellSelection, ())
+#classSpecObj.AddHook(ET_OnLevelupSystemEvent, EK_LVL_Spells_Check_Complete, OnLevelupSpellsCheckComplete, ())

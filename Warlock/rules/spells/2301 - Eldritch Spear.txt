@@ -1,7 +1,7 @@
 School: Evocation
 Component: S
 Casting Time: 1 action
-Range: Specified 60
+Range: Specified 250
 Saving Throw: None
 Spell Resistance: Yes
 Projectile: Yes

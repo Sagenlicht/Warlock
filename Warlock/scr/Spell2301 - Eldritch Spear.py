@@ -1,24 +1,24 @@
 from toee import *
 
 def OnBeginSpellCast(spell):
-    print "Eldritch Blast OnBeginSpellCast"
+    print "Eldritch Spear OnBeginSpellCast"
     print "spell.target_list=", spell.target_list
     print "spell.caster=", spell.caster, " caster.level= ", spell.caster_level
     print "spell.spell_level=", spell.spell_level
     print "spell.dc=", spell.dc
 
 def OnSpellEffect(spell):
-    print "Eldritch Blast OnSpellEffect"
+    print "Eldritch Spear OnSpellEffect"
 
 def OnBeginRound(spell):
-    print "Eldritch Blast OnBeginRound"
+    print "Eldritch Spear OnBeginRound"
 
 def OnBeginProjectile(spell, projectile, index_of_target):
-    print "Eldritch Blast OnBeginProjectile"
+    print "Eldritch Spear OnBeginProjectile"
     projectile.obj_set_int(obj_f_projectile_part_sys_id, game.particles("sp-Ray of Enfeeblement", projectile))
 
 def OnEndProjectile(spell, projectile, index_of_target):
-    print "Eldritch Blast OnEndProjectile"
+    print "Eldritch Spear OnEndProjectile"
 
     spell.duration = 0
     spellTarget = spell.target_list[index_of_target]
@@ -46,5 +46,5 @@ def OnEndProjectile(spell, projectile, index_of_target):
 
 
 def OnEndSpellCast(spell):
-    print "Eldritch Blast OnEndSpellCast"
+    print "Eldritch Spear OnEndSpellCast"
 

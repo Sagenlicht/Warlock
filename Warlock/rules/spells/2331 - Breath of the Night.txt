@@ -1,17 +1,15 @@
 School: Evocation
 Component: S
 Casting Time: 1 action
-Range: Specified 60
+Range: Personal
 Saving Throw: None
-Spell Resistance: Yes
-Projectile: Yes
+Spell Resistance: No
+Projectile: No
 flags_Target: Range
 inc_flags_Target: Other
+inc_flags_Target: Self
 exc_flags_Target: Dead
 exc_flags_Target: Non-critter
-exc_flags_Target: Self
-mode_Target: Single
-min_Target: 1
-max_Target: 1
-radius_Target: 0
+mode_Target: Personal
+radius_Target: 20
 ai_type: ai_action_offensive
